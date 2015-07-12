@@ -1,0 +1,15 @@
+Crappy MNIST autoencoder to do weight learning on
+
+784-32-784
+
+sample/sgdweights has W, b, Wp, bp
+
+Autoencoder is run like
+
+m = np.tanh(np.dot(x, W) + b)
+y = np.dot(m, Wp) + bp
+
+MSE loss is 0.5122 on mnist train after training for 20 epochs
+
+Drops to 0.5076 after 100 epochs. What is the theoretical minimum?
+
