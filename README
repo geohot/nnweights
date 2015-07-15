@@ -19,7 +19,9 @@ Adam is getting
   300 epochs, MSE 0.4951, 0.4330
   400 epochs, MSE 0.4951, 0.4330 
 
-Currently losing to PCA, which has MSE of 0.49
+Currently losing to PCA-32, which has MSE of 0.49
+PCA-128, MSE of 0.21
+PCA-256, MSE of 0.08
 
 784-128-32-128-784,         100 epochs, MSE 0.3742, 0.3180
 
@@ -44,4 +46,33 @@ Adam (is much better)
   100 epochs, MSE 0.2514, 0.2235
   500 epochs, MSE 0.1795, 0.1974
  1000 epochs, MSE 0.1584, 0.2006
+
+
+MNIST 2 experiments
+
+PCA-32 0.459
+
+
+RBM-32
+
+
+
+New Preproc, much more reasonable
+
+0.0320/0.0741 -- big ReLU 784,256,128,64,32,4, 1000 epochs
+0.0176/0.0172 -- linear 784-32-784, Adam, 25 epochs
+0.0173/0.0169 -- 784-32-784, Adam, 100 epochs
+0.0172/0.0172 -- PCA-32
+0.0140/0.0168 -- 784-256-128-32-8, Adam, 1000 epochs -- SAVED2
+0.0077/0.0077 -- 784-256-32-256-784, Adam, 500 epochs
+0.0071/0.0071 -- 784-256-32-256-784, Adam, 1000 epochs -- SAVED
+
+2's only
+0.0363 -- 784-256-4-256-784, Adam, 3000 epochs
+0.0265 -- big ReLU 784,256,128,64,32,4
+0.0153 -- linear 784-32-784, Adam, 50 epochs
+0.0153 -- PCA-32
+0.0106 -- 784-256-32-256-784, Adam, 500 epochs
+0.0082 -- 784-256-32-256-784, Adam, 1000 epochs
+
 
